@@ -15,7 +15,7 @@ class Agent:
         }
 
         sys.path.append(_path)
-        self.actor = PPO.load(str(_path) + '/exit_save.zip', custom_objects=custom_objects)
+        self.actor = PPO.load(str(_path) + '/rl_model_279881920_steps.zip', custom_objects=custom_objects)
 
     def act(self, state):
         action = self.actor.predict(state, deterministic=True)
